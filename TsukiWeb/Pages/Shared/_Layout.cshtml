@@ -3,14 +3,20 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] | Loja Tsukineko</title>
+    <title>@ViewData["Title"] Loja Tsukineko</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/glider/glider.css"/>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/TsukiWeb.styles.css" asp-append-version="true" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <script src="~/lib/glider/glider.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/Layout.js" asp-append-version="true"></script>
+    @RenderSection("head", false)
 </head>
 <body>
     <header>
@@ -18,33 +24,33 @@
             <div class="container-fluid" id="CFluid">
                 <div id="header">
                     <div class="row" id="background">
-                    <div class="col">
-                        <div class="container h-100">
-                            <div class="d-flex justify-content-center h-100" id="searchbar">
-                                <div class="searchbar">
-                                    <input class="search_input" type="text" name="" placeholder="Busque Aqui...">
-                                    <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+                        <div class="col">
+                            <div class="container h-100">
+                                <div class="d-flex justify-content-center h-100" id="searchbar">
+                                    <div class="searchbar">
+                                        <input class="search_input" type="text" name="" placeholder="Busque Aqui...">
+                                        <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col d-flex justify-content-center align-items-center">
-                        <a href="https://www.instagram.com/lojatsuki_/" data-toggle="tooltip" data-placement="bottom" title="Clique para acessar a pagina no Instagram" id="logo">
-                            <img src="/Imagens/logo.jpg" alt="Logo da Loja Tsukineko" id="logoImg" class="rounded-circle border border-dark">
-                        </a>
-                    </div>
-                    <div class="col">
-                        <div class="container h-100 justify-content-center d-flex" id="login">
-                            <div class="justify-items-center align-self-center">
-                                <a href="" class="text-decoration-none text-black Login" style="margin-right: 4px" data-toggle="tooltip" title="Clique aqui para fazer seu Login!">Fazer Login </a>
-                                <span> | </span>
-                                <a href="" class="text-decoration-none text-black Login" style="margin-left: 4px" data-toggle="tooltip" title="Clique aqui para fazer seu Cadastro!"> Cadastre-se</a>
-                                <a href="#" class="" style="margin-left: 15px" data-toggle="tooltip" title="Carrinho de Compras">
-                                    <i class="fas fa-shopping-cart" id="carrinho"></i>
-                                </a>
+                        <div class="col d-flex justify-content-center align-items-center">
+                            <a href="https://www.instagram.com/lojatsuki_/" data-toggle="tooltip" data-placement="bottom" title="Clique para acessar a pagina no Instagram" id="logo">
+                                <img src="/Imagens/logo.jpg" alt="Logo da Loja Tsukineko" id="logoImg" class="rounded-circle border border-dark">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <div class="container h-100 justify-content-center d-flex" id="login">
+                                <div class="justify-items-center align-self-center">
+                                    <a href="" class="text-decoration-none text-black Login" style="margin-right: 4px" data-toggle="tooltip" title="Clique aqui para fazer seu Login!">Fazer Login </a>
+                                    <span> | </span>
+                                    <a href="" class="text-decoration-none text-black Login" style="margin-left: 4px" data-toggle="tooltip" title="Clique aqui para fazer seu Cadastro!"> Cadastre-se</a>
+                                    <a href="#" class="" style="margin-left: 15px" data-toggle="tooltip" title="Carrinho de Compras">
+                                        <i class="fas fa-shopping-cart" id="carrinho"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </div>
                 </div>
             </div>
@@ -96,10 +102,6 @@
             &copy; 2021 - TsukiWeb
         </div>
     </footer>
-
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/Layout.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>

@@ -8,19 +8,24 @@
 
   <ItemGroup>
     <Compile Remove="Properties\NovaPasta\**" />
+    <Compile Remove="wwwroot\Imagens\NovaPasta\**" />
     <Content Remove="Properties\NovaPasta\**" />
+    <Content Remove="wwwroot\Imagens\NovaPasta\**" />
     <EmbeddedResource Remove="Properties\NovaPasta\**" />
+    <EmbeddedResource Remove="wwwroot\Imagens\NovaPasta\**" />
     <None Remove="Properties\NovaPasta\**" />
+    <None Remove="wwwroot\Imagens\NovaPasta\**" />
     <_WebToolingArtifacts Remove="Properties\NovaPasta\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\Imagens\" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="wwwroot\Imagens\logo.jpg" />
     <None Include="wwwroot\Imagens\logo.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Imagens\ImagensCarrossel\" />
+    <Folder Include="wwwroot\lib\glider\" />
   </ItemGroup>
 
 </Project>

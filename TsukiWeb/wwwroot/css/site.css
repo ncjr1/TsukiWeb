@@ -1,6 +1,10 @@
 html {
   font-size: 14px;
 }
+header{
+    height:200px;
+    z-index: 200;
+}
 
 @media (min-width: 768px) {
   html {
@@ -33,7 +37,8 @@ body {
     box-shadow: black 3px 1px 5px 2px;
 }
 
-.navHeader {
+#navbarNav{
+    z-index: 100000;
 }
 
 /* Style the header */

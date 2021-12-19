@@ -7,6 +7,10 @@ a.navbar-brand {
   word-break: break-all;
 }
 
+header{
+    height: 150px;
+}
+
 a {
   color: #fff;
 }

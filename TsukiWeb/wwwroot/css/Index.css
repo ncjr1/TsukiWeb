@@ -1,0 +1,8 @@
+﻿.glider{
+    background-color: green !important;
+    z-index: -1 !important;
+}
+
+.glider-dots{
+    z-index: -1 !important;
+}
