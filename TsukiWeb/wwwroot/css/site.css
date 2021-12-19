@@ -1,0 +1,194 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 60px;
+}
+
+#background {
+    background-color: #f787b2;
+}
+
+#header {
+    max-height: 1000px;
+    transition: max-height 1s;
+}
+
+#logoImg {
+    transform: scale(0.9);
+    transition: transform 1s;
+    box-shadow: black 3px 1px 5px 2px;
+}
+
+.navHeader {
+}
+
+/* Style the header */
+.header {
+}
+
+/* Page content */
+.content {
+    padding: 16px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.resizeLogo1 {
+    transform: scale(0.6) translateY(-21%);
+    transition: transform 1s;
+}
+
+.resizeLogo2 {
+    transform: scale(0.9);
+    transition: transform 1s;
+}
+
+.resizeHeader {
+    max-height: 2000px;
+    height: 110px;
+}
+
+.resizeBar1 {
+    transform: scale(0.8) translateY(-15%);
+    transition: transform 1s;
+}
+
+.resizeBar2 {
+    transform: scale(1);
+    transition: transform 1s;
+}
+
+
+.resizeLogin1 {
+    transform: scale(0.9) translateY(-15%);
+    transition: transform 1s;
+}
+
+.resizeLogin2 {
+    transform: scale(1);
+    transition: transform 1s;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+    padding-top: 102px;
+}
+
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+.dropdown-toggle::after {
+    content: none;
+}
+
+/* Hover effect Nav Bar*/
+.nav-item::after {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 2px;
+    background: #fcfc9c;
+    transition: 0.2s;
+}
+
+.nav-item:hover::after {
+    width: 100%
+}
+
+.nav-link:hover {
+    color: #ffc0cb !important;
+}
+
+.nav-link{
+    color: #fff !important;
+}
+/* --- */
+
+/*-- change navbar dropdown color --*/
+.dropdown-menu a {
+    color: #FFFFFF !important;
+}
+
+.dropdown-menu a:hover {
+    color: #ffc0cb !important;
+    background-color: #212529 !important;
+}
+/* --- */
+
+/* Barra de Busca */
+.searchbar {
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 60px;
+    background-color: #ebcfe0;
+    border-radius: 30px;
+    padding: 10px;
+    transform: scale(0.86);
+}
+
+.searchbar > .search_icon {
+    background: white;
+    color: #ffc0cb;
+}
+
+.search_input {
+    color: black;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color: red;
+    padding: 0 10px;
+    width: 450px;
+    line-height: 40px;
+}
+
+.search_icon {
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #ffc0cb;
+    text-decoration: none;
+}
+/* --- */
+
+/*Login, Cadastro e Carrinho*/
+#carrinho{
+    color: black;
+    transform: scale(1.4);
+}
+
+.Login {
+    font-weight:900;
+}
+/* -- */
+
+/* Logo Effect */
+#logoImg:hover {
+    transform: rotate(-15deg);
+}
+/* ---- */
