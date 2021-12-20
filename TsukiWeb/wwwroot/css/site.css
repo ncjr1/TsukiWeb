@@ -17,6 +17,10 @@ html {
   min-height: 100%;
 }
 
+#myHeader {
+    z-index: 20000 !important;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 60px;
@@ -100,6 +104,7 @@ body {
 
 .dropdown:hover > .dropdown-menu {
     display: block;
+    transition: all 1.5s ease;
 }
 
 .dropdown-toggle::after {

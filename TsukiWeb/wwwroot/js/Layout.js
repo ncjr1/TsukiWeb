@@ -14,33 +14,33 @@ var sticky = header.offsetTop;
 
 function ScrollResize() {
   if (window.pageYOffset > 50) {
-    header.addClass("sticky");
-    headerBackground.addClass("resizeHeader");
+    $("#myHeader").addClass("sticky");
+    $("#header").addClass("resizeHeader");
 
-    logo.addClass("resizeLogo1");
-    logo.removeClass("resizeLogo2");
+    $("#logo").addClass("resizeLogo1");
+    $("#logo").removeClass("resizeLogo2");
 
-    searchBar.addClass("resizeBar1");
-    searchBar.removeClass("resizeBar2");
+    $("#searchbar").addClass("resizeBar1");
+    $("#searchbar").removeClass("resizeBar2");
     
-    login.addClass("resizeLogin1");
-    login.removeClass("resizeLogin2");
+    $("#login").addClass("resizeLogin1");
+    $("#login").removeClass("resizeLogin2");
 
-    navHeader.addClass("navHeader");
+    $("#navHeader").addClass("navHeader");
   } else {
-    header.removeClass("sticky");
-    headerBackground.removeClass("resizeHeader");
+    $("#myHeader").removeClass("sticky");
+    $("#header").removeClass("resizeHeader");
 
-    logo.removeClass("resizeLogo1");
-    logo.addClass("resizeLogo2");
+    $("#logo").removeClass("resizeLogo1");
+    $("#logo").addClass("resizeLogo2");
 
-    searchBar.removeClass("resizeBar1");
-    searchBar.addClass("resizeBar2");
+    $("#searchbar").removeClass("resizeBar1");
+    $("#searchbar").addClass("resizeBar2");
 
-    login.removeClass("resizeLogin1");
-    login.addClass("resizeLogin2");
+    $("#login").removeClass("resizeLogin1");
+    $("#login").addClass("resizeLogin2");
     
 
-    navHeader.removeClass("navHeader");
+    $("#navHeader").removeClass("navHeader");
   }
 }

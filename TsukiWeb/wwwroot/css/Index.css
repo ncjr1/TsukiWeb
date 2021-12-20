@@ -3,6 +3,12 @@
     z-index: -1 !important;
 }
 
-.glider-dots{
-    z-index: -1 !important;
+/* .glider-contain{
+    z-index: 0 !important;
+} */
+
+.dropdown-menu:hover{
+    z-index: 1000 !important;
 }
+
+
