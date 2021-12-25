@@ -1,7 +1,7 @@
-html {
-  font-size: 14px;
-  position: relative;
-  min-height: 100%;
+﻿html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
@@ -19,12 +19,19 @@ header{
   }
 }
 
-.container{
+  
+.header-content{
     display: flex !important;
     flex-flow: row nowrap;
     justify-content: space-around;
+    align-items: baseline;
 }
 
+#container{
+    margin-left: auto;
+    margin-right: auto;
+}
+  
 /* The sticky class is added to the header with JS when it reaches its scroll position */
 .sticky {
     position: fixed;
@@ -38,19 +45,40 @@ header{
 /* */
 
 /* Resizing of the header elements */
+#logo{
+    transition: transform 0.7s ease-in-out;
+}
+
+#searchbar{
+    transition: transform 0.7s ease-in-out;
+}
+
+#login{
+    transition: transform 0.7s ease-in-out;
+}
+
+#navHeader{
+    transition: transform 0.7s ease-in-out;
+}
+
 .resizeLogo {
-    transform: scale(0.6) translateY(-21%);
-    transition: transform 1s ease-in-out;
+    transform: scale(0.6) translateY(-30%);
+    transition: transform 0.7s ease-in-out;
 }
 
 .resizeSearchBar {
-    transform: scale(0.8) translateY(-15%);
-    transition: transform 1s ease-in-out;
+    transform: scale(0.8) translateY(-45%) !important;
+    transition: transform 0.7s ease-in-out;
 }
 
 .resizeLogin {
-    transform: scale(0.9) translateY(-15%);
-    transition: transform 1s ease-in-out;
+    transform: scale(0.9) translateY(-45%);
+    transition: transform 0.7s ease-in-out;
+}
+
+.resizeNav{
+    transform: translateY(-50px);
+    transition: transform 0.7s ease-in-out;
 }
 /* */
 
@@ -104,7 +132,7 @@ header{
 
 
 /* Barra de Busca */
-.searchbar {
+#searchbar {
     margin-bottom: auto;
     margin-top: auto;
     height: 60px;
@@ -114,7 +142,7 @@ header{
     transform: scale(0.86);
 }
 
-.searchbar > .search_icon {
+#searchbar > .search_icon {
     background: white;
     color: #ffc0cb;
 }
@@ -127,7 +155,7 @@ header{
     width: 0;
     caret-color: red;
     padding: 0 10px;
-    width: 450px;
+    width: 800px;
     line-height: 40px;
 }
 
@@ -151,7 +179,7 @@ header{
     transform: scale(1.4);
 }
 
-.Login {
+#Login {
     font-weight:900;
 }
 /* -- */
@@ -169,17 +197,19 @@ header{
     box-shadow: black 3px 1px 5px 2px;
 }
 /* */
-
-
-/* Height Header Transition*/
-.header-content{
-    height: 150px;
+  
+  
+/* Height Header Transition*/  
+.header-container{
+    height: 170px;
     background-color: #f787b2;
+    transition: height 0.7s ease-in-out;
 }
 
 .transition {
-    height: 100px;
-    transition: height 1s ease-in-out;
+    height: 120px;
+    transition: height 0.7s ease-in-out;
 }
 /* */
-
+  
+  
