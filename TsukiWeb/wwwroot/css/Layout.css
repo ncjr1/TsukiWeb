@@ -9,7 +9,7 @@ body {
     margin-bottom: 60px;
 }
 
-header{
+#header{
     z-index: 20000 !important;
 }
 
@@ -35,12 +35,24 @@ header{
 /* The sticky class is added to the header with JS when it reaches its scroll position */
 .sticky {
     position: fixed;
-    top: 0;
+    top: 0px;
     width: 100%;
 }
 
 .sticky + .content {
-    padding-top: 102px;
+    padding-top: 200px;
+}
+
+.margin-top-20{
+    margin-top: 20% !important;
+}
+
+.margin-top-5{
+    margin-top: 5% !important;
+}
+
+.margin-b-5{
+    margin-bottom: 5%;
 }
 /* */
 
@@ -72,7 +84,7 @@ header{
 }
 
 .resizeLogin {
-    transform: scale(0.9) translateY(-45%);
+    transform: scale(0.9) translateY(-100%)!important;
     transition: transform 0.7s ease-in-out;
 }
 

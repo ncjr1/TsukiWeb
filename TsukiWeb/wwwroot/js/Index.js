@@ -5,23 +5,7 @@
     }
     
     Eventos(){
-        //Corrige o bug do GliderJS
-        $("body").on("mouseenter", "#ddmenu", (e) => {
-            $(".glider-contain").addClass("menosUm");
-        });
-
-        $("body").on("mouseleave", "#ddmenu", (e) => {
-            $(".glider-contain").removeClass("menosUm");
-        });
-
-        $("body").on("mouseenter", "#myHeader", (e) => {
-            $(".glider-contain").addClass("menosUm");
-        });
-
-        $("body").on("mouseleave", "#myHeader", (e) => {
-            $(".glider-contain").removeClass("menosUm");
-        });
-
+        //Vazio
     }
 
     Glider(){
@@ -37,6 +21,7 @@
         });
         this.AutoScroll(this.carrossel, 5000);
     }
+
     //Automatiza o Slider do GliderJS
     AutoScroll(slider, intervalo){
         let slides = slider.track.childElementCount;
@@ -46,8 +31,8 @@
             this.MudarSlide(this.ctd, slides, slider);
             this.ctd++;
         }, intervalo);
-
     }
+
     //Muda para o próximo slide, caso seja o ultimo retorna ao primeiro
     MudarSlide(ctd, slides, slider){
         ctd >= slides ? this.ctd = 0 : "";

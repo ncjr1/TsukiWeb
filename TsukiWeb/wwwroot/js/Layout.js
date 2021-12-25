@@ -7,13 +7,15 @@ var header = $("#myHeader");
 var sticky = header.offsetTop;
 
 function ScrollResize() {
-  if (window.pageYOffset > 10) {
+  if (window.pageYOffset > 30) {
     $("#header").addClass("transition");
     $("#header").addClass("sticky");
     $("#logo").addClass("resizeLogo");
     $("#searchbar").addClass("resizeSearchBar");
     $("#login").addClass("resizeLogin");
     $("#navHeader").addClass("resizeNav");
+    $("#conteudoPagina").addClass("margin-top-20");
+    $("#conteudoPagina").removeClass("margin-top-5");
   } else {
     $("#header").removeClass("transition");
     $("#header").removeClass("sticky");
@@ -21,5 +23,7 @@ function ScrollResize() {
     $("#searchbar").removeClass("resizeSearchBar");
     $("#login").removeClass("resizeLogin");
     $("#navHeader").removeClass("resizeNav");
+    $("#conteudoPagina").addClass("margin-top-5");
+    $("#conteudoPagina").removeClass("margin-top-20");
   }
 }
