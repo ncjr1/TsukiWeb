@@ -5,65 +5,49 @@
 }
 @section head
 {
-     <link rel="stylesheet" href="~/css/Index.css" asp-append-version="true" />
-     <script src="~/js/Index.js"></script>
-     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="~/css/Index.css" asp-append-version="true" />
+<script src="~/js/Index.js"></script>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
 }
-<div class="container">
-    <div class="conteudo margin-top-5" id="conteudoPagina">
-    <div class="row">
-        <div class="col">
-            <div class="glider-contain margin-b-5">
-                <div class="glider">
-                  <div>
-                      <img src="~/Imagens/ImagensCarrossel/Exemplo1Banner.png"/>
-                  </div>
-                  <div>
-                      <img src="~/Imagens/ImagensCarrossel/Exemplo2Banner.png"/>
-                  </div>
-                  <div>
-                      <img src="~/Imagens/ImagensCarrossel/Exemplo3Banner.png"/>
-                  </div>
+
+<div class="conteudo" id="conteudoPagina">
+    <div class="glider-contain">
+        <div class="glider">
+            <div>
+                <img src="~/Imagens/ImagensCarrossel/Placeholder.png" />
+            </div>
+            <div>
+                <img src="~/Imagens/ImagensCarrossel/Placeholder.png" />
+            </div>
+            <div>
+                <img src="~/Imagens/ImagensCarrossel/Placeholder.png" />
+            </div>
+        </div>
+        <button aria-label="Previous" class="glider-prev">
+            <i class="fa-solid fa-circle-chevron-left" id="btnEsquerda"></i>
+        </button>
+        <button aria-label="Next" class="glider-next">
+            <i class="fa-solid fa-circle-chevron-right" id="btnDireita"></i>
+        </button>
+        <div id="dots">
+            <button data-index="0" aria-label="Page 1" role="tab" class="glider-dot active"></button>
+            <button data-index="1" aria-label="Page 2" role="tab" class="glider-dot"></button>
+            <button data-index="2" aria-label="Page 3" role="tab" class="glider-dot"></button>
+            <button data-index="3" aria-label="Page 4" role="tab" class="glider-dot"></button>
+        </div>
+    </div>
+    <div class="produtos">
+        <div class="container">
+            <div class="card">
+                <div id="promocoes">
+                    <h2>Promoções</h2>
                 </div>
-                <button aria-label="Previous" class="glider-prev"> 
-                    <i class="fa-solid fa-circle-chevron-left" id="btnEsquerda"></i>
-                </button>
-                <button aria-label="Next" class="glider-next"> 
-                    <i class="fa-solid fa-circle-chevron-right" id="btnDireita"></i> 
-                </button>
-                <div id="dots">
-                    <button data-index="0" aria-label="Page 1" role="tab" class="glider-dot active"></button>
-                    <button data-index="1" aria-label="Page 2" role="tab" class="glider-dot"></button>
-                    <button data-index="2" aria-label="Page 3" role="tab" class="glider-dot"></button>
-                    <button data-index="3" aria-label="Page 4" role="tab" class="glider-dot"></button>
+                <div class="card-body">
+                    <div id="bodyProdutos">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="Example">
-            <span>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc gravida volutpat elit, ac efficitur tellus malesuada sed. Vivamus et metus mauris. Praesent pretium lorem eget nulla commodo eleifend. Sed faucibus faucibus lacus eu tristique. Donec vitae laoreet nulla, at volutpat magna. Donec molestie commodo mauris, ut volutpat lacus porttitor ut. Suspendisse imperdiet convallis tempor. Nunc pretium congue aliquet. Proin pellentesque nec neque sed viverra. Ut eget diam quis sapien accumsan dictum ac vel ipsum. Sed nec neque mollis risus rhoncus laoreet.
-
-                Sed enim ante, pellentesque a pulvinar vel, sollicitudin ut lorem. Suspendisse suscipit lorem lorem, quis feugiat velit dapibus eget. Donec dictum nunc a iaculis pellentesque. Donec ornare vestibulum imperdiet. Duis pellentesque ut justo at fermentum. Integer ultrices porta ornare. Ut ante purus, dapibus sit amet leo sit amet, consequat viverra elit. Curabitur tempus nunc eu porttitor euismod. Fusce tristique quam vel lobortis varius. Nulla facilisi. Mauris vehicula sapien quis iaculis sagittis. Donec porttitor consequat ornare. Phasellus luctus enim vel interdum pulvinar.
-                
-                Suspendisse rutrum fringilla tellus, quis semper est consectetur sed. Proin vulputate tristique mollis. Nullam iaculis at nunc sit amet dictum. Sed ut accumsan nunc. Nulla semper suscipit ipsum, ac vehicula erat aliquam nec. In euismod consequat tortor, egestas fermentum nisl sollicitudin at. Ut ultricies, erat eget finibus facilisis, quam augue ornare risus, id fringilla mauris neque vitae ipsum. Cras pellentesque vestibulum magna, ac rutrum enim semper in. Morbi cursus elementum massa at fermentum. Aenean aliquet maximus magna, sed fermentum dui accumsan id. In tincidunt a nulla nec venenatis. Quisque id diam enim. Mauris pharetra aliquam ultrices. Nunc semper arcu orci, in tempor est cursus ut. Aliquam porta nibh arcu. Suspendisse at turpis auctor, ultricies metus vel, cursus ante.
-                
-                Nam ornare id ex ut posuere. Aliquam auctor leo vitae tortor pellentesque viverra. Morbi libero est, aliquam vel magna eget, sollicitudin mattis nisi. Nunc ut pulvinar lacus. Integer vitae sodales ligula. Phasellus lobortis tempor metus, vitae ornare massa vehicula vitae. Nullam quis velit finibus, malesuada enim in, consectetur purus. Donec vitae sollicitudin mauris, ac molestie est. Sed venenatis velit at lectus varius, at luctus orci hendrerit. Nullam auctor est nibh, vitae pharetra orci hendrerit ac. Integer tempus justo vel lobortis dapibus. Aliquam dictum vehicula faucibus. Pellentesque magna arcu, mollis et tincidunt non, aliquet et lacus.
-                
-                Quisque auctor neque interdum, sagittis urna a, porttitor turpis. Nunc sit amet arcu tortor. Suspendisse potenti. Donec ex massa, fringilla viverra feugiat lacinia, pulvinar vitae est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus scelerisque orci eu ex aliquam posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in consectetur sapien. Vivamus eget rutrum ex. Ut posuere malesuada sapien, non ultricies metus gravida vel. Mauris aliquet, nunc eget congue facilisis, leo erat dapibus turpis, sed consequat arcu sapien elementum mauris. Fusce vitae mi consectetur, porta ante vitae, commodo felis.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc gravida volutpat elit, ac efficitur tellus malesuada sed. Vivamus et metus mauris. Praesent pretium lorem eget nulla commodo eleifend. Sed faucibus faucibus lacus eu tristique. Donec vitae laoreet nulla, at volutpat magna. Donec molestie commodo mauris, ut volutpat lacus porttitor ut. Suspendisse imperdiet convallis tempor. Nunc pretium congue aliquet. Proin pellentesque nec neque sed viverra. Ut eget diam quis sapien accumsan dictum ac vel ipsum. Sed nec neque mollis risus rhoncus laoreet.
-                
-                Sed enim ante, pellentesque a pulvinar vel, sollicitudin ut lorem. Suspendisse suscipit lorem lorem, quis feugiat velit dapibus eget. Donec dictum nunc a iaculis pellentesque. Donec ornare vestibulum imperdiet. Duis pellentesque ut justo at fermentum. Integer ultrices porta ornare. Ut ante purus, dapibus sit amet leo sit amet, consequat viverra elit. Curabitur tempus nunc eu porttitor euismod. Fusce tristique quam vel lobortis varius. Nulla facilisi. Mauris vehicula sapien quis iaculis sagittis. Donec porttitor consequat ornare. Phasellus luctus enim vel interdum pulvinar.
-                
-                Suspendisse rutrum fringilla tellus, quis semper est consectetur sed. Proin vulputate tristique mollis. Nullam iaculis at nunc sit amet dictum. Sed ut accumsan nunc. Nulla semper suscipit ipsum, ac vehicula erat aliquam nec. In euismod consequat tortor, egestas fermentum nisl sollicitudin at. Ut ultricies, erat eget finibus facilisis, quam augue ornare risus, id fringilla mauris neque vitae ipsum. Cras pellentesque vestibulum magna, ac rutrum enim semper in. Morbi cursus elementum massa at fermentum. Aenean aliquet maximus magna, sed fermentum dui accumsan id. In tincidunt a nulla nec venenatis. Quisque id diam enim. Mauris pharetra aliquam ultrices. Nunc semper arcu orci, in tempor est cursus ut. Aliquam porta nibh arcu. Suspendisse at turpis auctor, ultricies metus vel, cursus ante.
-                
-                Nam ornare id ex ut posuere. Aliquam auctor leo vitae tortor pellentesque viverra. Morbi libero est, aliquam vel magna eget, sollicitudin mattis nisi. Nunc ut pulvinar lacus. Integer vitae sodales ligula. Phasellus lobortis tempor metus, vitae ornare massa vehicula vitae. Nullam quis velit finibus, malesuada enim in, consectetur purus. Donec vitae sollicitudin mauris, ac molestie est. Sed venenatis velit at lectus varius, at luctus orci hendrerit. Nullam auctor est nibh, vitae pharetra orci hendrerit ac. Integer tempus justo vel lobortis dapibus. Aliquam dictum vehicula faucibus. Pellentesque magna arcu, mollis et tincidunt non, aliquet et lacus.
-                
-                Quisque auctor neque interdum, sagittis urna a, porttitor turpis. Nunc sit amet arcu tortor. Suspendisse potenti. Donec ex massa, fringilla viverra feugiat lacinia, pulvinar vitae est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus scelerisque orci eu ex aliquam posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in consectetur sapien. Vivamus eget rutrum ex. Ut posuere malesuada sapien, non ultricies metus gravida vel. Mauris aliquet, nunc eget congue facilisis, leo erat dapibus turpis, sed consequat arcu sapien elementum mauris. Fusce vitae mi consectetur, porta ante vitae, commodo felis.
-            </span>
-        </div>
-    </div>
     </div>
 </div>
 

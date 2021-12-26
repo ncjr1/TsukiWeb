@@ -17,6 +17,9 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/Layout.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        var imageUrl = '@Url.Content("~/Imagens/Produtos/")';
+    </script>
     @RenderSection("head", false)
 </head>
 <body>
@@ -78,7 +81,7 @@
         </div>
     </header>
     <div class="conteudoPagina">
-        <main role="main" class="pb-3">
+        <main role="main">
             @RenderBody()
         </main>
     </div>

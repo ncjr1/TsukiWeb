@@ -1,5 +1,11 @@
 ﻿.glider{
     z-index: -1 !important;
+    margin-top: 5%;
+    margin-bottom: 1%;
+}
+
+#dots{
+    margin-bottom: 2%;
 }
 
 .dropdown-menu:hover{
@@ -31,12 +37,12 @@
 }
 
 .glider-next{
-    right: -50px !important;
+    right: 30px !important;
     color: black !important;
 }
 
 .glider-prev{
-    left: -50px !important;
+    left: 30px !important;
     color: black !important;
 }
 
@@ -46,4 +52,90 @@
 
 .glider-next:hover, .glider-next:focus {
     color: #f787b2 !important;
+}
+
+.produtos{
+    background-color: #f5f5f5;
+}
+
+.container{
+    background-color: white !important;
+    padding: 0px;
+}
+
+#promocoes{
+    display: flex;
+    background-color: white;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: baseline;
+    height: 50px;
+    padding-top: 10px;
+}
+
+.card{
+    border-top: 1px solid rgba(0, 0, 0, 0.025) !important;
+}
+
+.produto{
+    width: 20% !important;
+}
+
+.produto .card{
+    border-top: 1px solid rgba(0, 0, 0, 0.095) !important;
+}
+
+.nomeProduto{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.corpoProduto{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.botoesProduto{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+
+.btn{
+    box-shadow: 1px 1px 1px black; 
+}
+
+.btnCarrinho{
+    background-color: #fcfc9c;
+}
+
+.btnFavorito{
+    background-color: #f787b2;
+}
+
+.btnCarrinho:hover, .btnFavorito:hover{
+    transform: translateY(-0.05em);
+    transition: transform 0.5s ease-in-out;
+}
+
+.imagemProduto{
+    display: flex;
+    justify-content: center;
+}
+
+.imagemProduto  img{
+    max-width: 100% !important;
+    max-height: auto;
+    padding-bottom: 4%;
+}
+
+#bodyProdutos{
+    display: flex;
+    align-items: baseline;
+    gap: 5%;
 }

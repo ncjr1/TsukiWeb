@@ -25,6 +25,7 @@ body {
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: baseline;
+    width: 100%;
 }
 
 #container{
@@ -37,14 +38,15 @@ body {
     position: fixed;
     top: 0px;
     width: 100%;
+    transition: width 0.7s ease-in-out;
 }
 
 .sticky + .content {
     padding-top: 200px;
 }
 
-.margin-top-20{
-    margin-top: 20% !important;
+.margin-top-15{
+    margin-top: 15% !important;
 }
 
 .margin-top-5{
@@ -215,7 +217,7 @@ body {
 .header-container{
     height: 170px;
     background-color: #f787b2;
-    transition: height 0.7s ease-in-out;
+    transition: height 0.7s ease-in-out, width 0.7s ease-in-out;
 }
 
 .transition {

@@ -1,11 +1,62 @@
-﻿class Index {
+﻿att = {
+    produto : []
+}
+
+class Index {
     constructor(){
         this.Glider();
         this.Eventos();
     }
     
     Eventos(){
-        //Vazio
+        let precoTeste = (15000).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        let precoTeste2 = (25000).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        debugger;
+        att.produto.push({ 
+            nomeProduto : "Produto 1",
+            preco : precoTeste,
+            urlImagem : imageUrl + "Brincos.jpeg"
+        });
+
+        att.produto.push({ 
+            nomeProduto : "Produto 2",
+            preco : precoTeste2,
+            urlImagem : imageUrl + "Brincos.jpeg"
+        });
+
+        att.produto.push({ 
+            nomeProduto : "Produto 3",
+            preco : precoTeste2,
+            urlImagem : imageUrl + "Brincos.jpeg"
+        });
+
+        att.produto.push({ 
+            nomeProduto : "Produto 4",
+            preco : precoTeste2,
+            urlImagem : imageUrl + "Brincos.jpeg"
+        });
+
+        att.produto.forEach(x => {
+            $("#bodyProdutos").append(`
+                <div class="produto">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="corpoProduto">
+                                <div class="imagemProduto">
+                                    <a href="/"> <img src=${x.urlImagem}> </a>
+                                </div>
+                                <h3>${x.nomeProduto}</h3>
+                                <h6>${x.preco}</h6>
+                                <div class="botoesProduto">
+                                    <button class="btn btnCarrinho"><i class="fa-solid fa-cart-plus"></i>Carrinho</button>
+                                    <button class="btn btnFavorito"><i class="fa-solid fa-heart"></i>Favoritos</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `);
+        });
     }
 
     Glider(){

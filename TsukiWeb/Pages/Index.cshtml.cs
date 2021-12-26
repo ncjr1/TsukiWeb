@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Web;
 
 namespace TsukiWeb.Pages
 {
@@ -16,5 +17,20 @@ namespace TsukiWeb.Pages
         {
 
         }
+
+        //[WebMethod]
+        //public static string Iniciar()
+        //{
+        //    try
+        //    {
+        //        var db = new DatabaseUtil();
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return "[Erro] " + ex.Message;
+        //    }
+        //}
+
     }
 }
