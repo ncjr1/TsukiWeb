@@ -79,6 +79,7 @@
 
 .produto{
     width: 20% !important;
+    padding-bottom: 1%;
 }
 
 .produto .card{
@@ -136,6 +137,7 @@
 
 #bodyProdutos{
     display: flex;
+    flex-flow: row wrap;
     align-items: baseline;
-    gap: 5%;
+    gap: 5% 5%;
 }

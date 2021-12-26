@@ -11,7 +11,6 @@ class Index {
     Eventos(){
         let precoTeste = (15000).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
         let precoTeste2 = (25000).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-        debugger;
         att.produto.push({ 
             nomeProduto : "Produto 1",
             preco : precoTeste,
@@ -33,6 +32,18 @@ class Index {
         att.produto.push({ 
             nomeProduto : "Produto 4",
             preco : precoTeste2,
+            urlImagem : imageUrl + "Brincos.jpeg"
+        });
+
+        att.produto.push({ 
+            nomeProduto : "Produto 1",
+            preco : precoTeste,
+            urlImagem : imageUrl + "Brincos.jpeg"
+        });
+
+        att.produto.push({ 
+            nomeProduto : "Produto 1",
+            preco : precoTeste,
             urlImagem : imageUrl + "Brincos.jpeg"
         });
 
