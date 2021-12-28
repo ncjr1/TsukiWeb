@@ -54,9 +54,7 @@
     color: #f787b2 !important;
 }
 
-.produtos{
-    background-color: #f5f5f5;
-}
+
 
 .container{
     background-color: white !important;
@@ -81,6 +79,7 @@
     width: 20% !important;
     padding-bottom: 1%;
 }
+
 
 .produto .card{
     border-top: 1px solid rgba(0, 0, 0, 0.095) !important;
@@ -120,8 +119,8 @@
 }
 
 .btnCarrinho:hover, .btnFavorito:hover{
-    transform: translateY(-0.05em);
-    transition: transform 0.5s ease-in-out;
+    /* transform: translateY(-0.05em);
+    transition: transform 0.5s ease-in-out; */
 }
 
 .imagemProduto{
@@ -140,4 +139,20 @@
     flex-flow: row wrap;
     align-items: baseline;
     gap: 5% 5%;
+}
+
+@keyframes backgroundAnimado {
+    from {background-position: 0 0}
+    to{ background-position: 100% 100%;}
+}
+
+
+.produtos{
+    background-color:rgb(247,135,178, 0.60);
+    background: url('/Imagens/Background.png') repeat 0 0;
+    animation-name: backgroundAnimado;
+    animation-duration: 100s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 }
