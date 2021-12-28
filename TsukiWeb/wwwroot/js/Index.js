@@ -46,6 +46,16 @@ class Index {
             preco : precoTeste,
             urlImagem : imageUrl + "Brincos.jpeg"
         });
+        att.produto.push({ 
+            nomeProduto : "Produto 1",
+            preco : precoTeste,
+            urlImagem : imageUrl + "Brincos.jpeg"
+        });
+        att.produto.push({ 
+            nomeProduto : "Produto 1",
+            preco : precoTeste,
+            urlImagem : imageUrl + "Brincos.jpeg"
+        });
 
         att.produto.forEach(x => {
             $("#bodyProdutos").append(`

@@ -54,14 +54,12 @@
     color: #f787b2 !important;
 }
 
-
-
 .container{
     background-color: white !important;
     padding: 0px;
 }
 
-#promocoes{
+.h2{
     display: flex;
     background-color: white;
     flex-flow: row nowrap;
@@ -69,6 +67,9 @@
     align-items: baseline;
     height: 50px;
     padding-top: 10px;
+    font-family: 'Lato', sans-serif;
+    color: #f787b2;
+    text-shadow: 1px 2px 3px black;
 }
 
 .card{
@@ -77,9 +78,8 @@
 
 .produto{
     width: 20% !important;
-    padding-bottom: 1%;
+    padding-bottom: 2%;
 }
-
 
 .produto .card{
     border-top: 1px solid rgba(0, 0, 0, 0.095) !important;
@@ -103,7 +103,7 @@
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    gap: 7px;
+    gap: 15px;
 }
 
 .btn{
@@ -137,22 +137,99 @@
 #bodyProdutos{
     display: flex;
     flex-flow: row wrap;
-    align-items: baseline;
-    gap: 5% 5%;
+    gap: 1%;
+    justify-content: space-around;
 }
 
 @keyframes backgroundAnimado {
-    from {background-position: 0 0}
-    to{ background-position: 100% 100%;}
+    0%  {background-position: 0 0}
+    25% { background-position: 100% 100%}
+    50% { background-position: 0 0}
+    75% { background-position: 100% 100%}
+    100% { background-position: 0 0}
 }
-
 
 .produtos{
     background-color:rgb(247,135,178, 0.60);
     background: url('/Imagens/Background.png') repeat 0 0;
     animation-name: backgroundAnimado;
-    animation-duration: 100s;
+    animation-duration: 160s;
     animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: linear;
     animation-fill-mode: forwards;
 }
+
+.banners{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner{
+    flex: 0 0 45%;
+    display: flex; 
+    height: 9.1rem;
+    background-color: #fcfc9c;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 1px 4px #212529;
+    overflow: hidden;
+}
+
+#aneis:hover .background-imagem, 
+#bonecos:hover .background-imagem,
+#brincos:hover .background-imagem,
+#colares:hover .background-imagem,
+#portacopos:hover .background-imagem,
+#pulseiras:hover .background-imagem,
+#teclas:hover .background-imagem
+{
+    filter:blur(2px);
+    transform: scale(1.1);
+    transition: transform .4s ease-in-out;
+    
+}
+
+#aneis .background-imagem,
+#bonecos .background-imagem,
+#brincos .background-imagem,
+#colares .background-imagem,
+#portacopos .background-imagem,
+#pulseiras .background-imagem,
+#teclas .background-imagem
+{
+    transition: transform .4s ease-in-out;
+}
+
+#aneis .banner-texto, 
+#bonecos .banner-texto,
+#brincos .banner-texto,
+#colares .banner-texto,
+#portacopos .banner-texto,
+#pulseiras .banner-texto,
+#teclas .banner-texto
+{
+    position: absolute;
+    z-index: 100;
+    font-size: 2.2rem;
+    font-family: 'Lato', sans-serif;
+    transition: transform .4s ease-in-out;
+    color: #fcfc9c;
+    text-shadow: 1px 1px 2px black;
+}
+
+#aneis:hover .banner-texto, 
+#bonecos:hover .banner-texto,
+#brincos:hover .banner-texto,
+#colares:hover .banner-texto,
+#portacopos:hover .banner-texto,
+#pulseiras:hover .banner-texto,
+#teclas:hover .banner-texto
+{
+    transform: scale(1.1);
+    transition: transform .4s ease-in-out;
+    color: #f787b2;
+}
+

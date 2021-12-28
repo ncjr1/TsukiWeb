@@ -11,6 +11,7 @@ body {
 
 #header{
     z-index: 20000 !important;
+    font-family: 'Lato', sans-serif;
 }
 
 @media (min-width: 768px) {
