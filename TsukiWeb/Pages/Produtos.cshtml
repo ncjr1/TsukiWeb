@@ -1,0 +1,26 @@
+﻿@page
+@model TsukiWeb.Pages.ProdutosModel
+@{
+    ViewData["Title"] = "Seja Bem Vindo a";
+}
+
+@section head
+{
+    <link rel="stylesheet" href="~/css/Produtos.css" asp-append-version="true" />
+    <script src="~/js/Produtos.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+}
+
+<div class="conteudo" id="conteudoPagina">
+    <div class="produtos">
+        <div class="container">
+            <div id="filtros">
+                <div class="form-group">
+                    <input type="text" class="" placeholder="Nome do Produto" id="txtFiltroNome"/>     
+                </div>
+            </div>
+            <div id="bodyProdutos">
+            </div>
+        </div>
+    </div>
+</div>

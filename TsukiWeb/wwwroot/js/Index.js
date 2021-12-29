@@ -9,6 +9,16 @@ class Index {
     }
     
     Eventos(){
+        if (window.pageYOffset > 90) {
+            $("#conteudoPagina").addClass("margin-top-15");
+            $("#conteudoPagina").removeClass("margin-top-5");
+          } else {
+            $("#conteudoPagina").addClass("margin-top-5");
+            $("#conteudoPagina").removeClass("margin-top-15");
+          }
+
+
+
         let precoTeste = (15000).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
         let precoTeste2 = (25000).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
         att.produto.push({ 
@@ -56,6 +66,40 @@ class Index {
             preco : precoTeste,
             urlImagem : imageUrl + "Brincos.jpeg"
         });
+        att.produto.push({ 
+            nomeProduto : "Produto 3",
+            preco : precoTeste2,
+            urlImagem : imageUrl + "Brincos.jpeg"
+        });
+        att.produto.push({ 
+            nomeProduto : "Produto 3",
+            preco : precoTeste2,
+            urlImagem : imageUrl + "Brincos.jpeg"
+        });
+        att.produto.push({ 
+            nomeProduto : "Produto 3",
+            preco : precoTeste2,
+            urlImagem : imageUrl + "Brincos.jpeg"
+        });
+        att.produto.push({ 
+            nomeProduto : "Produto 3",
+            preco : precoTeste2,
+            urlImagem : imageUrl + "Brincos.jpeg"
+        });        att.produto.push({ 
+            nomeProduto : "Produto 3",
+            preco : precoTeste2,
+            urlImagem : imageUrl + "Brincos.jpeg"
+        });
+        att.produto.push({ 
+            nomeProduto : "Produto 3",
+            preco : precoTeste2,
+            urlImagem : imageUrl + "Brincos.jpeg"
+        });
+        att.produto.push({ 
+            nomeProduto : "Produto 3",
+            preco : precoTeste2,
+            urlImagem : imageUrl + "Brincos.jpeg"
+        });
 
         att.produto.forEach(x => {
             $("#bodyProdutos").append(`
@@ -69,8 +113,12 @@ class Index {
                                 <h3>${x.nomeProduto}</h3>
                                 <h6>${x.preco}</h6>
                                 <div class="botoesProduto">
-                                    <button class="btn btnCarrinho"><i class="fa-solid fa-cart-plus"></i>Carrinho</button>
-                                    <button class="btn btnFavorito"><i class="fa-solid fa-heart"></i>Favoritos</button>
+                                    <div class="botao">
+                                        <button class="btn btnCarrinho"><i class="fa-solid fa-cart-plus"></i> Carrinho</button>
+                                    </div>
+                                    <div>
+                                        <button class="btn btnFavorito"><i class="fa-solid fa-heart"></i> Favoritos</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>

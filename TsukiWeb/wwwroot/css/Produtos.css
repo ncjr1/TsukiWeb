@@ -1,0 +1,21 @@
+﻿html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 60px;
+}
+
+#filtros {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    padding-top: 5%;
+    padding-bottom: 2%;
+}
+
+#txtNomeFiltro{
+}
