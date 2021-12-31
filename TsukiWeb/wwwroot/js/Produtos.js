@@ -34,7 +34,36 @@ class Produtos {
         });
 
         att.produto.push({ 
-            nomeProduto : "Caralho",
+            nomeProduto : "c teste",
+            preco : 25000,
+            urlImagem : imageUrl + "Brincos.jpeg"
+        });
+        att.produto.push({ 
+            nomeProduto : "Teste 1",
+            preco : 15000,
+            urlImagem : imageUrl + "Brincos.jpeg"
+        });
+
+        att.produto.push({ 
+            nomeProduto : "Teste 2",
+            preco : 25000,
+            urlImagem : imageUrl + "Brincos.jpeg"
+        });
+
+        att.produto.push({ 
+            nomeProduto : "Exemplo 1",
+            preco : 25000,
+            urlImagem : imageUrl + "Brincos.jpeg"
+        });
+
+        att.produto.push({ 
+            nomeProduto : "Exemplo 2",
+            preco : 25000,
+            urlImagem : imageUrl + "Brincos.jpeg"
+        });
+
+        att.produto.push({ 
+            nomeProduto : "c teste",
             preco : 25000,
             urlImagem : imageUrl + "Brincos.jpeg"
         });
@@ -44,8 +73,8 @@ class Produtos {
     Eventos(){
         $( "#txtFiltroNome" ).keyup(function(e) {
             e.stopPropagation();
-            let filtro = $('#txtFiltroNome').val();
-            let produtosFiltrados = att.produto.filter(x => x.nomeProduto.includes(filtro));
+            let filtro = $('#txtFiltroNome').val().toUpperCase().trim();
+            let produtosFiltrados = att.produto.filter(x => x.nomeProduto.toUpperCase().includes(filtro));
             app.LimpaProdutos();
             app.PreencheProdutos(produtosFiltrados);
         });
