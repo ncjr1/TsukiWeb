@@ -11,72 +11,102 @@ class Produtos {
     Iniciar(){
         att.produto.push({ 
             nomeProduto : "Teste 1",
-            preco : 15000,
+            preco : 1000,
             urlImagem : imageUrl + "Brincos.jpeg"
         });
 
-        att.produto.push({ 
-            nomeProduto : "Teste 2",
-            preco : 25000,
-            urlImagem : imageUrl + "Brincos.jpeg"
-        });
-
-        att.produto.push({ 
-            nomeProduto : "Exemplo 1",
-            preco : 25000,
-            urlImagem : imageUrl + "Brincos.jpeg"
-        });
-
-        att.produto.push({ 
-            nomeProduto : "Exemplo 2",
-            preco : 25000,
-            urlImagem : imageUrl + "Brincos.jpeg"
-        });
-
-        att.produto.push({ 
-            nomeProduto : "c teste",
-            preco : 25000,
-            urlImagem : imageUrl + "Brincos.jpeg"
-        });
         att.produto.push({ 
             nomeProduto : "Teste 1",
-            preco : 15000,
+            preco : 2000,
+            urlImagem : imageUrl + "Brincos.jpeg"
+        });
+
+        att.produto.push({ 
+            nomeProduto : "Teste 1",
+            preco : 3000,
+            urlImagem : imageUrl + "Brincos.jpeg"
+        });
+
+        att.produto.push({ 
+            nomeProduto : "Teste 1",
+            preco : 4000,
+            urlImagem : imageUrl + "Brincos.jpeg"
+        });
+
+        att.produto.push({ 
+            nomeProduto : "Teste 1",
+            preco : 5000,
+            urlImagem : imageUrl + "Brincos.jpeg"
+        });
+
+        att.produto.push({ 
+            nomeProduto : "Teste 1",
+            preco : 6000,
             urlImagem : imageUrl + "Brincos.jpeg"
         });
 
         att.produto.push({ 
             nomeProduto : "Teste 2",
-            preco : 25000,
+            preco : 7000,
             urlImagem : imageUrl + "Brincos.jpeg"
         });
 
         att.produto.push({ 
-            nomeProduto : "Exemplo 1",
-            preco : 25000,
+            nomeProduto : "Teste 1",
+            preco : 8000,
             urlImagem : imageUrl + "Brincos.jpeg"
         });
 
         att.produto.push({ 
-            nomeProduto : "Exemplo 2",
-            preco : 25000,
+            nomeProduto : "Teste 1",
+            preco : 9000,
             urlImagem : imageUrl + "Brincos.jpeg"
         });
 
         att.produto.push({ 
-            nomeProduto : "c teste",
-            preco : 25000,
+            nomeProduto : "Teste 1",
+            preco : 10000,
             urlImagem : imageUrl + "Brincos.jpeg"
         });
         this.PreencheProdutos(att.produto);
     }
     
     Eventos(){
-        $( "#txtFiltroNome" ).keyup(function(e) {
-            e.stopPropagation();
-            let filtro = $('#txtFiltroNome').val().toUpperCase().trim();
-            let produtosFiltrados = att.produto.filter(x => x.nomeProduto.toUpperCase().includes(filtro));
-            app.LimpaProdutos();
-            app.PreencheProdutos(produtosFiltrados);
+        $("#txtFiltroMin").maskMoney({prefixMoney: "R$ ", placeholder: "Preço Mínimo"});
+        $("#txtFiltroMax").maskMoney({prefixMoney: "R$ ", placeholder: "Preço Máximo"});
+        // $( "#txtFiltroNome" ).keyup(function(e) {
+        //     e.stopPropagation();
+        //     let filtro = $('#txtFiltroNome').val().toUpperCase().trim();
+        //     let produtosFiltrados = att.produto.filter(x => x.nomeProduto.toUpperCase().includes(filtro));
+        //     app.LimpaProdutos();
+        //     app.PreencheProdutos(produtosFiltrados);
+        // });
+
+        $("body").on("click", "#btnFiltro", (e) => {
+            e.preventDefault();
+            if($("#txtFiltroNome").val() == "" && $("#txtFiltroMin").val() == "" && $("#txtFiltroMax").val() == ""){
+                app.LimpaProdutos();
+                app.PreencheProdutos(att.produto);
+                return;
+            }else if($("#txtFiltroMin").val() == "" && $("#txtFiltroMax").val() == ""){
+                let filtro = $('#txtFiltroNome').val().toUpperCase().trim();
+                let produtosFiltrados = att.produto.filter(x => x.nomeProduto.toUpperCase().includes(filtro));
+                app.LimpaProdutos();
+                app.PreencheProdutos(produtosFiltrados);
+            }else{
+                let filtro = $('#txtFiltroNome').val().toUpperCase().trim();
+                let produtosFiltrados = att.produto.filter(x => x.nomeProduto.toUpperCase().includes(filtro) && (x.preco >= ($("#txtFiltroMin").cleanVal() / 100) && x.preco <= ($("#txtFiltroMax").cleanVal() / 100)));
+                app.LimpaProdutos();
+                app.PreencheProdutos(produtosFiltrados);
+            }
+        });
+
+        $("body").on("click", "#btnLimpaFiltro", (e) => {
+            e.preventDefault();
+            $("#txtFiltroMin").val('');
+            $("#txtFiltroMax").val('');
+            $("#txtFiltroNome").val("");
+            $("#btnFiltro").trigger("click");
         });
     }
 

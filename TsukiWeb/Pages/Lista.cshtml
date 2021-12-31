@@ -1,0 +1,35 @@
+﻿@page
+@model TsukiWeb.Pages.ProdutosModel
+@{
+    ViewData["Title"] = "Seja Bem Vindo a";
+}
+
+@section head
+{
+    <link rel="stylesheet" href="~/css/Produtos.css" asp-append-version="true" />
+    <script src="~/js/Produtos.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.mask.js"></script>
+}
+
+<div class="conteudo" id="conteudoPagina">
+    <div class="produtos">
+        <div class="container">
+                <div class="card-body">
+                    <div class="card-title">
+                        <label>Filtros</label>
+                    </div>
+                    <div id="filtros">
+                        <input type="text" class="inputFiltro Preco" placeholder="Preço Mínimo" id="txtFiltroMin"/>
+                        <h1> - </h1>
+                        <input type="text" class="inputFiltro Preco" placeholder="Preço Máximo" id="txtFiltroMax"/>
+                        <input type="text" class="inputFiltro" placeholder="Nome do Produto" id="txtFiltroNome"/>
+                        <button id="btnLimpaFiltro" class=" btn btn-outline-danger" data-toggle="tooltip" title="Limpar os Campos"><i class="fa-solid fa-xmark"></i></button>
+                        <button id="btnFiltro" class="btn btn-outline-secondary " data-toggle="tooltip" title="Filtrar"><i class="fa-solid fa-magnifying-glass"></i> Filtrar</button>
+                    </div>
+                </div>
+            <div id="bodyProdutos">
+            </div>
+        </div>
+    </div>
+</div>

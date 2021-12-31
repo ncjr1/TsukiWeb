@@ -12,13 +12,10 @@ class Index {
         if (window.pageYOffset > 90) {
             $("#conteudoPagina").addClass("margin-top-15");
             $("#conteudoPagina").removeClass("margin-top-5");
-          } else {
-            $("#conteudoPagina").addClass("margin-top-5");
-            $("#conteudoPagina").removeClass("margin-top-15");
-          }
-
-
-
+        } else {
+          $("#conteudoPagina").addClass("margin-top-5");
+          $("#conteudoPagina").removeClass("margin-top-15");
+        }
         let precoTeste = (15000).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
         let precoTeste2 = (25000).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
         att.produto.push({ 
@@ -85,7 +82,8 @@ class Index {
             nomeProduto : "Produto 3",
             preco : precoTeste2,
             urlImagem : imageUrl + "Brincos.jpeg"
-        });        att.produto.push({ 
+        });        
+        att.produto.push({ 
             nomeProduto : "Produto 3",
             preco : precoTeste2,
             urlImagem : imageUrl + "Brincos.jpeg"

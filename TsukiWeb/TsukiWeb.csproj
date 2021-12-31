@@ -9,12 +9,16 @@
   <ItemGroup>
     <Compile Remove="Properties\NovaPasta\**" />
     <Compile Remove="wwwroot\Imagens\NovaPasta\**" />
+    <Compile Remove="wwwroot\lib\jQuery-Mask-Plugin-master\**" />
     <Content Remove="Properties\NovaPasta\**" />
     <Content Remove="wwwroot\Imagens\NovaPasta\**" />
+    <Content Remove="wwwroot\lib\jQuery-Mask-Plugin-master\**" />
     <EmbeddedResource Remove="Properties\NovaPasta\**" />
     <EmbeddedResource Remove="wwwroot\Imagens\NovaPasta\**" />
+    <EmbeddedResource Remove="wwwroot\lib\jQuery-Mask-Plugin-master\**" />
     <None Remove="Properties\NovaPasta\**" />
     <None Remove="wwwroot\Imagens\NovaPasta\**" />
+    <None Remove="wwwroot\lib\jQuery-Mask-Plugin-master\**" />
     <_WebToolingArtifacts Remove="Properties\NovaPasta\**" />
   </ItemGroup>
 

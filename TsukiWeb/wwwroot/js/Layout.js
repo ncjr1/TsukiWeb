@@ -3,9 +3,6 @@
 //Scroll Resize 
 window.onscroll = function() { ScrollResize() };
 
-var header = $("#myHeader");
-var sticky = header.offsetTop;
-
 function ScrollResize() {
   if (window.pageYOffset > 90) {
     $("#consertaHeader").addClass("consertarHeader");
