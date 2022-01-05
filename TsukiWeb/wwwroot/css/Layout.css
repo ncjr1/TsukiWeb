@@ -438,7 +438,7 @@ body {
     min-height: 800px;
 }
 
-.produtos{
+.background{
     background: url('/Imagens/Background.png') repeat 0 0;
     animation-name: backgroundAnimado;
     animation-duration: 240s;
