@@ -1,0 +1,94 @@
+body {
+    color: #222222;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 60px;
+}
+
+h3{
+    width: 50%;
+    margin-left: 25%;    
+}
+
+label{
+    display: block;
+}
+
+.conteudo{
+    margin: 25px auto 0 auto;
+    padding: 0.5% 0;
+    width: 60%;
+}
+
+/* Seção do Fale conoso*/
+
+.contato{
+    border-radius: 40px;
+    display: flex;
+    width: 100%;
+}
+
+form .bordaBolada{
+    border-right: 1px #222222 solid;
+    height: 98%;
+    margin: 1% 0;
+}
+
+.sociais .bordaBolada{
+    border-left: 1px #222222 solid;
+    height: 98%;
+    margin: 1% 0;
+    padding: 0 0.6rem;
+}
+
+/* Seção do formulario */
+
+form{
+    padding: 0.4rem 0 0.4rem 0;
+    text-align: center;
+    width: 50%;
+}
+
+.inputContato{
+    background-color: #fffacd;
+    border: 1px solid #222222;
+    border-radius: 30px;
+    margin: 2% 0 2% 0;
+    padding: 5px 10px;
+    width: 80%;
+}
+
+.btnContato{
+    background-color: #f787b2;
+    border: 1px;
+    border-radius: 20px;
+    display: block;
+    margin: auto;
+    width: 20%;
+} 
+
+#message{
+    border-radius: 3px;
+    height: 90px;
+}
+
+/* Seção redes sociais */
+
+.sociais{
+    text-align: left;
+    padding: 0.4rem 0 0.4rem 0;
+    width: 50%;
+}
+
+.contatoInsta{
+    color: #f787b2;
+    text-decoration: none;
+    transition: 0.7s;
+}
+
+.contatoInsta :hover{
+    color: #222222 !important;
+    transition: 0.7s;
+}
+
+
+/* top right bottom left */
