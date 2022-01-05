@@ -340,7 +340,17 @@ body {
 
 /**/
 
-
+@media screen and (max-width: 1399px) {
+    .btn {
+        transform: scale(0.9);
+    }
+    .botoesProduto{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        gap: 2px !important;
+    }
+}
 /* Card de Produto*/
 .card{
     border-top: 1px solid rgba(0, 0, 0, 0.025) !important;
