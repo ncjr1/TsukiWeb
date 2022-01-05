@@ -486,7 +486,7 @@ body {
     margin-bottom: auto;
     margin-top: auto;
     height: 60px;
-    background-color: #fcfc9c;
+    background-color: #fffacd;
     border-radius: 30px;
     padding: 10px;
     color: black;
@@ -500,6 +500,7 @@ body {
     border: #eeeeee 1px;
     font-family: "Lato", sans-serif;
     margin-right: 2%;
+    border: 1px solid rgba(0, 0, 0, 0.5) !important;
 }
 /**/
 
