@@ -19,10 +19,48 @@
                 <div class="anuncioFotos">
                     <div class="glider-contain">
                         <div class="glider">
+                            <div>
+                                <img src="~/Imagens/ImagensCarrossel/Placeholder.png" />
+                            </div>
+                            <div>
+                                <img src="~/Imagens/ImagensCarrossel/Placeholder.png" />
+                            </div>
+                            <div>
+                                <img src="~/Imagens/ImagensCarrossel/Placeholder.png" />
+                            </div>
+                            <div>
+                                <img src="~/Imagens/ImagensCarrossel/Placeholder.png" />
+                            </div>
+                        </div>
+                        <button aria-label="Previous" class="glider-prev">
+                            <i class="fa-solid fa-circle-chevron-left" id="btnEsquerda"></i>
+                        </button>
+                        <button aria-label="Next" class="glider-next">
+                            <i class="fa-solid fa-circle-chevron-right" id="btnDireita"></i>
+                        </button>
+                        <div id="dots">
+                            <button data-index="0" aria-label="Page 1" role="tab" class="glider-dot active"></button>
+                            <button data-index="1" aria-label="Page 2" role="tab" class="glider-dot"></button>
+                            <button data-index="2" aria-label="Page 3" role="tab" class="glider-dot"></button>
                         </div>
                     </div>
                 </div>
-                <div class="anuncioPreco">
+                <div class="anuncioDados">
+                    <h3 id="nomeProduto">Nome do Produto</h3>
+                    <h6 id="preco">R$ 1.899</h6>
+                    <p id="descricao">Pózinho branco do bom.<br />Segundo Baiú, um experiente aventureiro, é comumente encontrado em estabelecimentos comerciais com o nome de "açucar".</p>
+                    @*Plausível adicionar um botão de compra na hora*@
+                    <div class="btns">
+                        <button class="btn btnComprar">Comprar agora</button>
+                        <button class="btn btnCarrinho"><i class="fa-solid fa-cart-plus"></i> Carrinho</button>                      
+                        <button class="btn btnFavorito"><i class="fa-solid fa-heart"></i> Favoritos</button>                    
+                    </div>
+                </div>
+            </div>
+            <div class="sugestoes">
+                <h6>Produtos similares</h6>
+                <div id="bodySimilares">
+
                 </div>
             </div>
         </div>

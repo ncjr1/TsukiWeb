@@ -385,7 +385,7 @@ body {
     gap: 15px;
 }
 
-.btnFavorito, .btnCarrinho{
+.btnFavorito, .btnCarrinho, .btnComprar{
     box-shadow: 1px 1px 1px black; 
     display: flex !important;
 }
