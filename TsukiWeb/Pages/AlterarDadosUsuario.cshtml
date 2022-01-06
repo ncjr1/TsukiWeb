@@ -1,0 +1,39 @@
+﻿@page
+@model TsukiWeb.Pages.AlterarDadosUsuarioModel
+@{
+    ViewData["Title"] = "Seja Bem Vindo a";
+}
+
+@section head
+{
+    <link rel="stylesheet" href="~/css/AlterarDadosUsuario.css" asp-append-version="true" />
+    <script src="~/js/AlterarDadosUsuario.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.mask.js"></script>
+}
+<div class="background">
+    <div class="container">
+        <div class="dadosUsuario">
+            <div class="dados">
+                <form method="post">
+                    <label for="nome">Nome</label>
+                    <input type="text" class="inputAlteracao" id="nome" plcaholder="Digite seu nome"/>                    
+                    <label for="email">E-mail</label>
+                    <input type="text" class="inputAlteracao" id="email" plcaholder="Digite seu novo e-mail" />                   
+                    <label for="senha">Senha</label>
+                    <input type="text" class="inputAlteracao" id="Senha" plcaholder="Digite sua nova senha" />  
+                    
+                                            @*Adicionar campos para os dados restantes*@
+
+                    <button type="submit" class="btnAlteracao">Salvar</button>
+                </form>
+            </div>
+            <div class="enderecos">
+                <p>Seus endereços</p>
+                <div class = "bodyEnderecos">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

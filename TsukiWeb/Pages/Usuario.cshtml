@@ -1,0 +1,70 @@
+﻿@page
+@model TsukiWeb.Pages.UsuarioModel
+@{
+    ViewData["Title"] = "Seja Bem Vindo a";
+}
+
+@section head
+{
+    <link rel="stylesheet" href="~/css/Usuario.css" asp-append-version="true" />
+    <script src="~/js/Usuario.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.mask.js"></script>
+}
+<div class="background">
+        <div class="container">
+            <div class="usuario">
+                <div class="dados" id="bodyUsuario">
+                    <img class="imgUsuario" src="~/Imagens/logo.jpg" />
+                    <div class="nomeUsuario">
+                        <h5 id="nomeUsu">Bem vindo Fulano de tal</h5>
+                        <p id="email"><i class="fas fa-envelope"></i> ${x.emailUsuario}</p>
+                        <a href="/AlterarDadosUsuario"> Alterar dados <i class="fas fa-user-edit"></i></a>
+                    </div>
+                </div>
+                <div class="favoritos">
+                    <h5>Último item a se tornar favorito</h5>
+                    <div class="corpoProduto">
+                        <div class="imagemProduto">
+                            <a href="/"> <img src="~/Imagens/Produtos/Brincos.jpeg"> </a>
+                        </div>
+                        <div class="nomeFavorito">
+                            <h3 id="nomeProduto">Brinco</h3>
+                            <h6 id="precoProduto">R$ 1.000,00</h6>
+                        </div>
+                        <div class="botao1">
+                            <button class="btn btnCarrinho"><i class="fa-solid fa-cart-plus"></i> Carrinho</button>
+                        </div>
+                        <div class="botao2">
+                            <button class="btn btnFavorito"><i class="fa-solid fa-heart"></i> Favoritos</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="pedido">
+                    <h5>Último Pedido</h5>
+                    <div class="dadosPedido">
+                        <div class="numeroPedido">
+                            <label>Número do pedido</label>
+                            <p id="numPedido"></p>
+                            <label>Status</label>
+                            <p id="status"></p>
+                            <label>Data do pedido</label>
+                            <p id="dataPedido"></p>
+                        </div>
+                        <div class="endereco">
+                            <label>Endereço</label>
+                            <p id="rua">Rua tal</p>
+                            <p id="numEndereco">Número tal,</p>
+                            <p id="bairro">Cabeludo</p>
+                            <div class="bloco">
+                                <p id="cep">CEP 1223040 -</p>
+                                <p id="cidade">Rio de janeiro,</p>
+                                <p id="estado">RJ</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="">Todos pedidos <i class="fas fa-truck-loading"></i></a>
+                </div>
+            </div>
+        </div>
+</div>
