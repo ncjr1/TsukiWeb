@@ -14,15 +14,42 @@
 <div class="background">
         <div class="container">
             <div class="usuario">
-                <div class="dados" id="bodyUsuario">
+                <div class="card" id="cardPerfil">
+                    <div class="card-body">
+                        <div class="perfil">
+                            <img class="imgUsuario" src="~/Imagens/logo.jpg"/>
+                            <div class="perfilDados">
+                                <h4 id="perfilNome"></h4>
+                                <p id="perfilEmail"></p>
+                            </div>
+                            <div class="perfilEditar">
+                                <a href="/AlterarDadosUsuario"><h6><i class="fa-solid fa-gear" id="gear"></i> Editar Perfil</h6></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" id="cardDados">
+                    <div class="card-body">
+                        <div class="dados">
+                           <h5>Endereço</h5>       
+                        </div>
+                    </div>
+                </div>
+                <div class="usuarioCorpo">
+                    <div class="historicoCompra">
+                        <div class="borda"><h6> Histórico de Compras </h6></div>
+                        <div class="conteudoHistorico"> <h1> MEME</h1></div>
+                    </div>
+                </div>
+                @*<div class="dados" id="bodyUsuario">
                     <img class="imgUsuario" src="~/Imagens/logo.jpg" />
                     <div class="nomeUsuario">
                         <h5 id="nomeUsu">Bem vindo Fulano de tal</h5>
-                        <p id="email"><i class="fas fa-envelope"></i> ${x.emailUsuario}</p>
+                        <p id="email"><i class="fas fa-envelope"></i></p>
                         <a href="/AlterarDadosUsuario"> Alterar dados <i class="fas fa-user-edit"></i></a>
                     </div>
-                </div>
-                <div class="favoritos">
+                </div>*@
+                @*<div class="favoritos">
                     <h5>Último item a se tornar favorito</h5>
                     <div class="corpoProduto">
                         <div class="imagemProduto">
@@ -39,8 +66,8 @@
                             <button class="btn btnFavorito"><i class="fa-solid fa-heart"></i> Favoritos</button>
                         </div>
                     </div>
-                </div>
-                <div class="pedido">
+                </div>*@
+                @*<div class="pedido">
                     <h5>Último Pedido</h5>
                     <div class="dadosPedido">
                         <div class="numeroPedido">
@@ -64,7 +91,7 @@
                         </div>
                     </div>
                     <a href="">Todos pedidos <i class="fas fa-truck-loading"></i></a>
-                </div>
+                </div>*@
             </div>
         </div>
 </div>

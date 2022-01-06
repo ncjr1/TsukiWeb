@@ -3,31 +3,33 @@ att = {
     usuario : []
 }
 
-class Produtos {
+class Perfil {
     constructor(){
         this.Iniciar();
         //this.Eventos();
     }
 
     Iniciar(){
-        att.produto.push({ 
-            nomeProduto : "Teste 1",
-            preco : 1000,
-            urlImagem : imageUrl + "Brincos.jpeg"
-        });
-        att.usuario.push({
-            nomeUsuario : "Cuca beludo",
-            emailUsuario : "Cuc4_B3luD0@gmail.com"
-        });
-        this.PreenchePagina(att);
+        $("#perfilNome").html('Nilton Cosme');
+        $("#perfilEmail").html('<i class="fas fa-envelope"></i> exemplo@email.com');
+        // att.produto.push({ 
+        //     nomeProduto : "Teste 1",
+        //     preco : 1000,
+        //     urlImagem : imageUrl + "Brincos.jpeg"
+        // });
+        // att.usuario.push({
+        //     nomeUsuario : "Cuca beludo",
+        //     emailUsuario : "Cuc4_B3luD0@gmail.com"
+        // });
+        // this.PreenchePagina(att.usuario);
         // this.PreencheFavorito(att.produto);
     }
     
     PreenchePagina(x){
-        $("#nomeUsu").val(`Bem Vindo ${x.usuario.nomeUsuario}`);
-        $("#email").val(`<i class="fas fa-envelope"></i> ${x.usuario.emailUsuario}`);
-        $("#nomeProduto").val(`${x.produto.nomeProduto}`);
-        $("#precoProduto").val(`${x.produto.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`);
+        $("#nomeUsu").text(`Bem Vindo ${att.usuario[0].nomeUsuario}`);
+        $("#email").html(`<i class="fas fa-envelope"></i> ${att.usuario[0].nomeUsuario}`);
+        $("#nomeProduto").text(`${att.produto[0].nomeProduto}`);
+        $("#precoProduto").text(`${att.produto[0].preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`);
     }
 
     // PreencheFavorito(x){
@@ -59,5 +61,5 @@ class Produtos {
 }
 
 $(document).ready(function () {
-    app = new Produtos();
+    app = new Perfil();
 });
