@@ -1,15 +1,15 @@
 ﻿@page
 @model TsukiWeb.Pages.ProdutoModel
 @{
-     ViewData["Title"] = "Seja Bem Vindo a";
+    ViewData["Title"] = "Seja Bem Vindo a";
 }
 
 @section head
 {
-    <link rel="stylesheet" href="~/css/Produto.css" asp-append-version="true" />
-    <script src="~/js/Produto.js"></script>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/jquery/dist/jquery.mask.js"></script>
+<link rel="stylesheet" href="~/css/Produto.css" asp-append-version="true" />
+<script src="~/js/Produto.js"></script>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.mask.js"></script>
 }
 
 <div class="conteudo" id="conteudoPagina">
@@ -18,7 +18,7 @@
             <div class="anuncio">
                 <div class="anuncioFotos">
                     <div class="glider-contain">
-                        <div class="glider">
+                        <div class="glider" id="imagensAnuncio">
                             <div>
                                 <img src="~/Imagens/ImagensCarrossel/Placeholder.png" />
                             </div>
@@ -42,6 +42,7 @@
                             <button data-index="0" aria-label="Page 1" role="tab" class="glider-dot active"></button>
                             <button data-index="1" aria-label="Page 2" role="tab" class="glider-dot"></button>
                             <button data-index="2" aria-label="Page 3" role="tab" class="glider-dot"></button>
+                            <button data-index="3" aria-label="Page 4" role="tab" class="glider-dot"></button>
                         </div>
                     </div>
                 </div>
@@ -49,19 +50,51 @@
                     <h3 id="nomeProduto">Nome do Produto</h3>
                     <h6 id="preco">R$ 1.899</h6>
                     <p id="descricao">Pózinho branco do bom.<br />Segundo Baiú, um experiente aventureiro, é comumente encontrado em estabelecimentos comerciais com o nome de "açucar".</p>
-                    @*Plausível adicionar um botão de compra na hora*@
                     <div class="btns">
                         <button class="btn btnComprar">Comprar agora</button>
-                        <button class="btn btnCarrinho"><i class="fa-solid fa-cart-plus"></i> Carrinho</button>                      
-                        <button class="btn btnFavorito"><i class="fa-solid fa-heart"></i> Favoritos</button>                    
+                        <button class="btn btnCarrinho"><i class="fa-solid fa-cart-plus"></i> Carrinho</button>
+                        <button class="btn btnFavorito"><i class="fa-solid fa-heart"></i> Favoritos</button>
                     </div>
                 </div>
             </div>
             <div class="sugestoes">
                 <h6>Produtos similares</h6>
-                <div id="bodySimilares">
+                @*<div id="bodySimilares">
 
-                </div>
+                    </div>*@
+                <div class=glider-contain>
+                    <div  class="glider" id="gliderSimilares">
+                    </div>
+                    <button aria-label="Previous" class="glider-prev">
+                        <i class="fa-solid fa-circle-chevron-left" id="btnEsquerda"></i>
+                    </button>
+                    <button aria-label="Next" class="glider-next">
+                        <i class="fa-solid fa-circle-chevron-right" id="btnDireita"></i>
+                    </button>
+                    <div role="tablist" class="dots">
+                        <button data-index="0" aria-label="Page 1" role="tab" class="glider-dot active"></button>
+                        <button data-index="1" aria-label="Page 2" role="tab" class="glider-dot"></button>
+                        <button data-index="2" aria-label="Page 3" role="tab" class="glider-dot"></button>
+                        <button data-index="3" aria-label="Page 4" role="tab" class="glider-dot"></button>
+                    </div>
+                </div>                
+            </div>
+            <div class="opinioes">
+                <h6>Opiniões sobre o Produto</h6>
+                <div class="quadroOpinioes">
+                    <div class="opiniao">
+                        <p class="corpoOpiniao">As palavra de Baiú é são tão grandes que fazem a lua parecer um lulu! S2</p>
+                        <button class="like"><i class="fas fa-thumbs-up"></i></button>
+                        <button class="dislike"><i class="fas fa-thumbs-down"></i></button>
+                        <div class="resposta">
+                            <p class="corpoResposta"></p>
+                        </div>
+                    </div>
+                </div>                
+                <form class="formOpinioes">
+                    <textarea class="textOpiniao" placeholder="Deixe sua opnião" required></textarea>
+                    <button class="btnOpiniao">Opinar</button>
+                </form>
             </div>
         </div>
     </div>

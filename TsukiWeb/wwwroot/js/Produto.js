@@ -11,9 +11,10 @@ att ={
 
 class Produto {
     constructor(){
-        this.Iniciar();
-        this.Glider();
         this.Eventos();
+        this.Glider();
+        this.Iniciar();
+        this.Similares();
     }
 
     Iniciar(){
@@ -38,6 +39,24 @@ class Produto {
             preco : 3000,
             urlImagem : imageUrl + "Brincos.jpeg"
         });
+
+        att.produto.push({
+            nomeProduto : "Teste 1",
+            preco : 4000,
+            urlImagem : imageUrl + "Brincos.jpeg"
+        });
+
+        att.produto.push({
+            nomeProduto : "Teste 1",
+            preco : 5000,
+            urlImagem : imageUrl + "Brincos.jpeg"
+        });
+
+        att.produto.push({
+            nomeProduto : "Teste 1",
+            preco : 6000,
+            urlImagem : imageUrl + "Brincos.jpeg"
+        });
         this.PreencheProdutos(att.produto);
 
         //$(".glider").html(`
@@ -46,10 +65,26 @@ class Produto {
     }
 
     Eventos(){
+        $("body").on("click",".btnOpiniao", (e=>{
+            e.preventDefault();
+            var text = $(".textOpiniao").val();
+            $(".textOpiniao").val("");
+            $(".quadroOpinioes").append(`
+                <div class="opiniao">
+                    <p class="corpoOpiniao">${text}</p>
+                    <button class="like"><i class="fas fa-thumbs-up"></i></button>
+                    <button class="dislike"><i class="fas fa-thumbs-down"></i></button>
+                    <div class="resposta">
+                        <p class="corpoResposta"></p>
+                    </div>
+                </div>
+            `);
+
+        }));
 
     }
     Glider(){
-        this.carrossel = new Glider(document.querySelector('.glider'), {
+        this.carrossel = new Glider(document.querySelector('#imagensAnuncio'), {
             slidesToShow: 1,
             dots: '#dots',
             draggable: true,
@@ -60,6 +95,20 @@ class Produto {
             rewind: true
         });
         this.AutoScroll(this.carrossel, 5000);
+    }
+
+    Similares(){
+        new Glider(document.querySelector('#gliderSimilares'), {
+            slidesToShow: 5,
+            slidesToScroll: 5,
+            draggable: true,
+            dots: '.dots',
+            arrows: {
+              prev: '.glider-prev',
+              next: '.glider-next'
+            },
+            rewind: true
+          });
     }
 
     //Automatiza o Slider do GliderJS
@@ -81,8 +130,8 @@ class Produto {
 
     PreencheProdutos(lst){
         lst.forEach(x => {
-            $("#bodySimilares").append(`
-                <div class="produto">
+            $("#gliderSimilares").append(`
+                <div class="produtos">
                     <div class="card">
                         <div class="card-body">
                             <div class="corpoProduto">
